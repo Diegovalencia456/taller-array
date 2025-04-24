@@ -1,8 +1,8 @@
-// Arreglos para los productos y sus cantidades
-let productos = ["Chicles", "Gaseosa", "Chocolate", "Caramelos", "Galletas"];
-let cantidades = [5, 3, 2, 0, 6]; // El stock de cada producto (cantidad disponible)
 
-// Función para mostrar el inventario de la máquina
+let productos = ["Chicles", "Gaseosa", "Chocolate", "Caramelos", "Galletas"];
+let cantidades = [5, 3, 2, 0, 6]; 
+
+
 const mostrarInventario = () => {
   let inventario = "Inventario disponible:\n";
   for (let i = 0; i < productos.length; i++) {
@@ -11,9 +11,9 @@ const mostrarInventario = () => {
   alert(inventario);
 };
 
-// Función para procesar el pago
+
 const procesarPago = (monto) => {
-  const precioProducto = 1; // El precio de cada producto es 1 moneda
+  const precioProducto = 1; 
   if (monto === precioProducto) {
     return true;
   } else {
@@ -22,27 +22,27 @@ const procesarPago = (monto) => {
   }
 };
 
-// Función para entregar el producto
+
 const entregarProducto = (codigo) => {
   if (codigo < 1 || codigo > productos.length) {
     alert("Código inválido. Elige un producto entre 1 y 5.");
     return false;
   }
 
-  const indiceProducto = codigo - 1; // Ajuste al índice de los arreglos
+  const indiceProducto = codigo - 1; 
 
   if (cantidades[indiceProducto] > 0) {
-    cantidades[indiceProducto]--; // Reducir la cantidad del producto en el inventario
+    cantidades[indiceProducto]--; 
     alert(`¡Disfruta tu ${productos[indiceProducto]}!`);
     return true;
   } else {
     alert(`${productos[indiceProducto]} está agotado.`);
-    sugerirProducto(); // Si el producto está agotado, sugiere otro
+    sugerirProducto(); 
     return false;
   }
 };
 
-// Función para sugerir un producto disponible
+
 const sugerirProducto = () => {
   let sugerencia = "Productos disponibles:\n";
   let encontrado = false;
@@ -60,10 +60,10 @@ const sugerirProducto = () => {
   }
 };
 
-// Función principal para interactuar con la máquina expendedora
+
 const interactuarConMaquina = () => {
   while (true) {
-    mostrarInventario(); // Mostrar el inventario
+    mostrarInventario(); 
     let codigoProducto = parseInt(prompt("Selecciona el producto (1-5) o ingresa 0 para salir:"));
     
     if (codigoProducto === 0) {
@@ -80,12 +80,12 @@ const interactuarConMaquina = () => {
 
     if (procesarPago(pago)) {
       if (!entregarProducto(codigoProducto)) {
-        // Si no se pudo entregar el producto (agotado), se sugiere otro
+     
         continue;
       }
     }
   }
 };
 
-// Iniciar la máquina expendedora
+
 interactuarConMaquina();
