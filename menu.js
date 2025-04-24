@@ -1,4 +1,4 @@
-// Ejercicio 1: Sistema de Reservas de Hotel
+
 let habitaciones = [0, 0, 0, 0, 0];
 
 const mostrarEstado = () => {
@@ -59,7 +59,7 @@ const sistemaReservas = () => {
   } while (opcion !== "4");
 };
 
-// Ejercicio 2: Cajero Automático de Banco
+
 let transacciones = [];
 
 const consultarSaldo = () => {
@@ -116,7 +116,7 @@ const cajeroAutomatico = () => {
   } while (opcion !== "4");
 };
 
-// Ejercicio 3: Cola de Atención de Clientes en Supermercado
+
 let colaClientes = [];
 const maxCola = 7;
 
@@ -172,7 +172,7 @@ const colaAtencionClientes = () => {
   } while (opcion !== "4");
 };
 
-// Ejercicio 4: Máquina Expendedora de Dulces y Gaseosas
+
 let productos = ["Chicles", "Gaseosa", "Chocolate", "Caramelos", "Galletas"];
 let cantidades = [5, 3, 2, 0, 6];
 
@@ -257,7 +257,7 @@ const maquinaExpendedora = () => {
   } while (opcion !== "3");
 };
 
-// Menú principal
+
 const menuPrincipal = () => {
   let opcion;
   do {
@@ -287,5 +287,5 @@ const menuPrincipal = () => {
   } while (opcion !== "5");
 };
 
-// Iniciar el menú principal
+
 menuPrincipal();
